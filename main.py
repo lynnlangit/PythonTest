@@ -6,7 +6,7 @@ for num in numbers:
 print("\n"+"This is puzzle #1")
 
 #2. Print all palindromes in string of letters
-letters = 'aaaabbbcccaaaz'
+letters = 'aaaabbbcccgaaaz'
 for l in letters:
   print(l)
 print("\n"+"This is puzzle #2")
