@@ -1,0 +1,1 @@
+{"mixinTypes":[],"builders":{"configs":{}},"runners":{"configs":{"project:/ON%20%20Python%203.4":{"ram":1000,"variables":{"configurationType":"python/web"},"options":{}},"recommend":{"ram":256,"variables":{},"options":{}}},"default":"project:/Copy%20of%20Python%203.4"},"description":"demo","type":"python","attributes":{"language":["python"]}}
