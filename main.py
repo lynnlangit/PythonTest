@@ -1,15 +1,53 @@
 #1. Print int array, neg, then zero, then positive
-numbers = [0,1,2,-1,0,3,0]
+numbers = [0,1,2,-1,0,3,0, -2]
 numbers.sort()
 for num in numbers:
 	print(str(num),',',end='')
 print("\n"+"This answers puzzle #1")
 
-#2. Print all palindromes in string of letters
-letters = 'aaaabbbcccgaaaz'
-for l in letters:
-  print(l)
+#2. Print all palindromes of three or more in string of letters
+letters = 'aba'
+bPos= 0
+for l in letters:  
+  cPos = 0 
+  pp = []
+  for p in range(len(letters)-bPos):   #WHUT
+    pp.append(letters[p+bPos])
+    rstring = "".join(pp)
+    if ((len(rstring))%2)==0:
+      print("it's even")
+    else:
+      middle = int(((len(rstring)+1)/2)-1)
+      for i in range(middle):
+        #print(i)
+        if rstring[middle-(i+1)] == rstring[middle+(i+1)]:
+          print(rstring)
+    cPos += 1
+  bPos += 1
+  print("something else")  
 print("\n"+"This is puzzle #2")
+
+#odd method
+neoletters = 'abb'
+newletters = 'shade'
+middle = int(((len(newletters)+1)/2)-1)
+for i in range(middle):
+  print(i)
+  if newletters[middle-(i+1)] == newletters[middle+(i+1)]:
+    print(newletters)
+    
+#even method   
+print("a test of the python sytstem") 
+letterchildren = 'abbbba'
+midddle = int(len(letterchildren)/2)
+ispalindrome = 0
+for i in range(midddle):
+  if letterchildren[i] == letterchildren[len(letterchildren)-(i+1)]: 
+    ispalindrome = 1
+  else:
+    ispalindrome = 0
+if ispalindrome:print(letterchildren)
+print("the end tof the test")  
 
 #3. LOOKUP print number from letter on a telephone keypad w/out using mapping array/hashmap
 #ref list:  2 is ABC, 3 is DEF, 4 is GHI, 5 is KJL, 6 is MNO, 7 is PQR, 8 is STU, 9 is VWX, 0 is YZ
@@ -19,9 +57,11 @@ for l in letters:
   	 print('2')
   elif l == 'd' or l == 'e':
   	 print('3')  
+  elif l == 'z':
+    print('0')
   else:
   	 print(l)
-print("\n"+"This is puzzle #3")
+print("\n"+"This answers puzzle #3")
 
 #4. STRING OPERATIONS Given a character array which contains a sentence 
 #(words separated by spaces), given the indices of two words in the character array, 
