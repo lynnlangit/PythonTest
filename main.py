@@ -1,14 +1,20 @@
+#General Convenience Methods
+def namePuzzle(puzzle):
+	print("\n"+ "Starting puzzle #" + puzzle + "...")
+    
+def solvePuzzle(puzzle):
+   print("\n"+ "Solved puzzle #" + puzzle)
+    
 #1. Print int array, neg, then zero, then positive
-print("\n"+"Starting puzzle #1...")
+namePuzzle('1')
 numbers = [0,1,2,-1,0,3,0, -2]
 numbers.sort()
 for num in numbers:
-	print(str(num),',',end='')
-print("\n"+"Answering puzzle #1")
-
+	print(str(num),end=', ')
+solvePuzzle("1")
 
 #2. Print all palindromes of three or more in string of letters
-print("\n"+"Starting puzzle #2...")
+namePuzzle('2')
 letters = 'ababafeefzabazf'
 beginPos= 0
 currPos = 0 
@@ -41,13 +47,13 @@ for firstLetter in letters:
         print(posPalString)
     currPos += 1
   beginPos += 1
-print("Answering puzzle #2")
+solvePuzzle("2")
 
 #3. LOOKUP print number from letter on a telephone keypad w/out using mapping array/hashmap
 #ref list:  2 is ABC, 3 is DEF, 4 is GHI, 5 is KJL, 6 is MNO, 7 is PQR, 8 is STU, 9 is VWX, 0 is YZ
-print("\n"+"Starting puzzle #3...")
+namePuzzle('3')
 letters = 'lynnabacdcdaeez'
-for l in letters:
+def lookup(l):
   if l == 'a' or l=='b' or l=='c':
   	 print('2', end=", ")
   elif l == 'd' or l == 'e':
@@ -56,7 +62,9 @@ for l in letters:
     print('0', end=", ")
   else:
   	 print(l, end=", ")
-print("\n"+"Answering puzzle #3")
+for l in letters:
+  lookup(l)
+solvePuzzle("3")
 
 #4. STRING OPERATIONS Given a character array which contains a sentence 
 #(words separated by spaces), given the indices of two words in the character array, 
